@@ -1,137 +1,315 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khoá THPT - Lớp Anh thầy Kết</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Khoá luyện thi THPTQG 2k9 - Lớp Anh thầy Kết</title>
+
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fff8f0;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+body{
+    font-family:Arial,sans-serif;
+    background:#fff8f0;
+    margin:0;
+    text-align:center;
+}
 
-  header {
-    background-color: #ffd6ba; /* pastel cam nhạt */
-    color: #7a4e3e;
-    padding: 40px 20px;
-    font-size: 36px;
-    font-weight: bold;
-  }
+header{
+    background:#EA7B7B;
+    color:white;
+    padding:30px;
+    font-size:32px;
+    font-weight:bold;
+}
 
-  .button-container {
-    margin: 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 900px;
-  }
+.toc-container{
+    max-width:1600px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
 
-  .nav-button {
-    background-color: #a0e7e5; /* pastel xanh nhạt */
-    color: #3a3a3a;
-    border: none;
-    padding: 20px 25px;
-    font-size: 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
-    text-decoration: none;
-    flex: 1 1 200px;
-    max-width: 220px;
-  }
+h2{
+    color:#7a4e3e;
+}
 
-  .nav-button:hover {
-    background-color: #ffb3ba; /* pastel hồng nhạt khi hover */
-    transform: translateY(-3px);
-  }
+.toc-item{
+    display:grid;
+    grid-template-columns:2fr 1fr 0.8fr 0.8fr 4fr;
+    gap:10px;
+    margin:10px 0;
+}
 
-  .social-section {
-    margin-top: 60px;
-  }
+.toc-header div{
+    background:#ffe5d9;
+    padding:12px;
+    border-radius:10px;
+    font-weight:bold;
+}
 
-  .social-section h2 {
-    font-size: 24px;
-    color: #7a4e3e;
-    margin-bottom: 20px;
-  }
+.lesson-link,
+.study-session,
+.study-time,
+.video-link,
+.homework-link{
+    padding:12px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    align-items:center;
+    transition:.3s;
+}
 
-  .social-icons a {
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 40px;
-    color: #a0e7e5; /* pastel xanh nhạt */
-    transition: color 0.3s, transform 0.2s;
-  }
+.lesson-link{
+    background:#a0e7e5;
+    justify-content:flex-start;
+    text-align:left;
+    padding-left:16px;
+}
 
-  .social-icons a:hover {
-    color: #ffb3ba; /* pastel hồng nhạt khi hover */
-    transform: translateY(-5px);
-  }
+.study-session{
+    background:#ffe0ac;
+    justify-content:center;
+}
 
-  footer {
-    margin-top: 50px;
-    padding: 20px;
-    font-size: 16px;
-    color: #555;
-    background-color: #fff0e1;
-  }
+.study-time{
+    background:#ffd6e0;
+    justify-content:center;
+    text-align:center;
+}
 
-  @media (max-width: 600px) {
-    .nav-button {
-      flex: 1 1 100%;
-      max-width: 90%;
-      font-size: 18px;
-      padding: 15px 10px;
+.video-link{
+    background:#ffd6a5;
+    justify-content:center;
+}
+
+.homework-link{
+    background:#f8f9fa;
+    font-weight:normal;
+    text-align:left;
+    line-height:1.6;
+}
+
+.toc-item.lesson:hover .lesson-link,
+.toc-item.lesson:hover .study-session,
+.toc-item.lesson:hover .study-time,
+.toc-item.lesson:hover .video-link,
+.toc-item.lesson:hover .homework-link{
+    background:#fdffb6;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#ffb3ba;
+    color:#333;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+footer{
+    margin-top:40px;
+    padding:15px;
+    background:#fff0e1;
+}
+
+@media(max-width:768px){
+    .toc-header{
+        display:none;
     }
 
-    .social-icons a {
-      font-size: 35px;
-      margin: 0 10px;
+    .toc-item{
+        grid-template-columns:1fr;
     }
-  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  Lớp Anh thầy Kết - Luyện thi THPT
+Luyện thi THPTQG - Lớp Anh thầy Kết
 </header>
 
-<div class="button-container">
-  <a href="https://ketng91.github.io/lopanhthayket.chuongtrinhluyenthithptqg2k9/" class="nav-button">Khoá học 2k9</a>
-  <a href="https://ketng91.github.io/DangsapxepcauTHPTQG/" class="nav-button"> Sắp xếp câu</a>
-  <a href="https://ketng91.github.io/DangdocdienTHPTQG/" class="nav-button">Đọc Điền Đoạn văn</a>
-  <a href="https://ketng91.github.io/DangdochieuTHPTQG/" class="nav-button">Đọc hiểu Đoạn văn</a>
-  <a href="#" class="nav-button">Khoá Luyện đề</a>
-  <a href="#" class="nav-button">Khoá Đọc hiểu nâng cao</a>
-  <a href="https://ketng91.github.io/TuvungTHPTQG-homepage/" class="nav-button">Bộ Từ vựng</a>
-  <a href="https://ketng91.github.io/khoathpt_Docsongngutubaihoc/" class="nav-button">Đọc song ngữ từ bài học</a>
-  <a href="https://ketng91.github.io/khoathpt_Luyendocsongngu/" class="nav-button">Đọc song ngữ từ đề</a>
-  <a href="https://ketng91.github.io/khoathpt_grammar/" class="nav-button">Trắc nghiệm Grammar</a>
-  <a href="https://ketng91.github.io/khoathpt_tuvung/" class="nav-button">Trắc nghiệm Từ vựng</a>
-  <a href="https://ketng91.github.io/gametuvung/" class="nav-button">Game từ vựng</a>
-  <a href="https://ketng91.github.io/ThithuTHPTQG/" class="nav-button">Thi thử</a>
-  <a href="#" class="nav-button">Ket's notes</a>
+<div class="toc-container">
+
+<h2>📚 Chương trình luyện thi THPTQG 2k9</h2>
+
+<div class="toc-item toc-header">
+    <div>Bài học</div>
+    <div>Ca học</div>
+    <div>Thời gian</div>
+    <div>Bài giảng</div>
+    <div>BTVN / Ghi chú</div>
 </div>
 
-<!-- ====== Phần MXH ====== -->
-<div class="social-section">
-  <h2>MXH: Lớp Anh thầy Kết</h2>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=100095128431844" target="_blank" title="Facebook"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://www.youtube.com/@LopmonAnhthayKet" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.tiktok.com/@lopanhthayket" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-  </div>
+<div id="lesson-list"></div>
+
+<a href="https://ketng91.github.io/lopanhthayket_thptqg2k9/" class="back-btn">
+⬅ Quay về trang chính
+</a>
+
 </div>
 
 <footer>
-  © 2026 Lớp Anh thầy Kết. All rights reserved.
+© 2026 Lớp Anh thầy Kết. All rights reserved.
 </footer>
+
+<script>
+
+const lessons = [
+
+{
+    lesson:"Lesson 1: Collocaiton Do-Make; Reading; Grammar: Thành phần câu",
+    lessonLink:"https://drive.google.com/drive/folders/1PxfigH3bJrn72M7B7WmS0TW_a2Xmsiw0?usp=sharing",
+    session:"Ca chiều 2",
+    time:"T3 02/06<br>3:30 - 5:00",
+    video:"https://youtu.be/-mdZbfyt1V8",
+    homework:"",
+    note:"Học Collocation Do; Từ vựng bài 1 và Grammar. Hoàn thành bài tập còn trên lớp."
+},
+{
+    lesson:"Lesson 2: Reading; Grammar: Chia Vc theo thì",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T5 04/06<br>3:30 - 5:00",
+    video:"https://youtu.be/5x6WooU4hLo",
+    homework:"",
+    note:"Học Collocation Make; Từ vựng bài 2 và Grammar. Hoàn thành bài tập còn trên lớp."
+},
+{
+    lesson:"Lesson 3: Reading; Grammar: Danh từ",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T7 06/06<br>3:30 - 5:00",
+    video:"https://youtu.be/QGmfLb-NVqU",
+    homework:"",
+    note:"Học Từ vựng và Grammar. Hoàn thành bài tập còn trên lớp."
+},
+{
+    lesson:"Lesson 4: Reading - Topic: Environment; Grammar: Review",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T3 09/06<br>3:30 - 5:00",
+    video:"https://youtu.be/J3rgPl31dIE",
+    homework:"",
+    note:"Học Từ vựng bài học. Hoàn thành bài tập còn trên lớp."
+},
+{
+    lesson:"Lesson 5: Reading - Topic: Environment; Grammar: Adj",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T5 11/06<br>3:30 - 5:00",
+    video:"https://youtu.be/5XnkcseH5uc",
+    homework:"https://docs.google.com/forms/d/e/1FAIpQLSehOuVDafX6iSsRc8du3FcuixA-NARZ-xrpXpzMA16nxlQe7w/viewform?usp=header",
+    note:"Học Từ vựng bài học. Click vào đây để Hoàn thành BTVN."
+},
+{
+    lesson:"Lesson 6: Reading - Topic: Environment; Grammar: Review",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T7 13/06<br>3:00 - 4:30",
+    video:"https://youtu.be/MBIWKXY2VhY",
+    homework:"",
+    note:"Học grammar Adj và từ vựng bài học. Làm bài tập còn trên lớp."
+},
+{
+    lesson:"Lesson 7: Grammar: Adv",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T3 16/06<br>3:00 - 4:30",
+    video:"https://youtu.be/o652aBsJVdg",
+    homework:"",
+    note:"Học grammar Adv và từ vựng bài học. Làm bài tập còn trên lớp."
+},
+
+{
+    lesson:"Lesson 8: Reading - Topic: Environment; Grammar: Cụm Danh từ",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T5 18/06<br>3:00 - 4:30",
+    video:"https://youtu.be/t2U4zu1EBFo",
+    homework:"",
+    note:"Học grammar và từ vựng bài học. Làm bài tập còn trên lớp."
+},
+{
+    lesson:"Lesson 9: Reading - Topic: Environment; Grammar: Lượng từ (Phần 1)",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T7 20/06<br>3:00 - 4:30",
+    video:"https://youtu.be/VUY_WeSa0Ok",
+    homework:"",
+    note:"Học grammar và từ vựng bài học. BTVN: Làm câu 5, 6, 16, 21, 25, 30, 32, 33, 36, 38, 63, 68, 69, 70"
+},
+{
+    lesson:"Lesson 10: Sắp xếp hội thoại; Grammar: Lượng từ (Phần 2)",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T3 23/06<br>3:00 - 4:30",
+    video:"https://youtu.be/27KurvqvfvE",
+    homework:"",
+    note:"Học grammar và từ vựng đã học ở Tháng 6. Làm bài tập còn trên lớp."
+},
+{
+    lesson:"Lesson 11: Tổng ôn toàn diện T6",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T5 25/06<br>3:00 - 4:30",
+    video:"",
+    homework:"",
+    note:""
+},
+{
+    lesson:"Lesson 12: Thi ĐGNL định kỳ T6",
+    lessonLink:"",
+    session:"Ca chiều 2",
+    time:"T7 27/06<br>3:00 - 4:30",
+    video:"",
+    homework:"",
+    note:""
+},
+
+
+];
+
+const container = document.getElementById("lesson-list");
+
+lessons.forEach(item => {
+
+container.innerHTML += `
+<div class="toc-item lesson">
+
+<a class="lesson-link" href="${item.lessonLink}" target="_blank">
+${item.lesson}
+</a>
+
+<div class="study-session">
+${item.session}
+</div>
+
+<div class="study-time">
+${item.time}
+</div>
+
+<a class="video-link" href="${item.video}" target="_blank">
+Video
+</a>
+
+<a class="homework-link" href="${item.homework}" target="_blank">
+${item.note}
+</a>
+
+</div>
+`;
+
+});
+
+</script>
 
 </body>
 </html>
+```
